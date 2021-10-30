@@ -1,5 +1,7 @@
 # form-library
 
+Mostly created to try the new vue3 v-model changes
+
 ## Project setup
 ```
 npm install
@@ -7,18 +9,15 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm dev
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm build
 ```
 
-### Lints and fixes files
+### Run tests
 ```
-npm run lint
+npm test
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
