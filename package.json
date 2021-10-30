@@ -3,24 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite --host",
+    "build": "vite build --mode prod",
+    "preview": "vite preview --host",
+    "test": "jest"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.0.0",
-    "prettier": "^2.2.1"
+    "@babel/preset-env": "^7.15.8",
+    "@vitejs/plugin-vue": "^1.9.4",
+    "@vue/test-utils": "^2.0.0-rc.16",
+    "@vue/vue3-jest": "^27.0.0-alpha.3",
+    "babel-jest": "^27.3.1",
+    "jest": "^27.3.1",
+    "prettier": "^2.2.1",
+    "vite": "^2.6.13"
   }
 }
