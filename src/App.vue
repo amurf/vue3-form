@@ -39,12 +39,13 @@
     />
   </div>
 
-  <FormCheckboxGroup
-    :options="['Cheese', 'Cake']"
-    name="bestFood"
-    label="Best food?"
-    v-model="formInputGroupValue"
+  <AddressForm
+    v-model:street="address.street"
+    v-model:postcode="address.postcode"
+    v-model:state="address.state"
+    v-model:country="address.country"
   />
+  {{ address }}
 </template>
 
 <script setup>
@@ -55,7 +56,9 @@ import FormRadio from "@/components/FormRadio.vue";
 import FormRadioGroup from "@/components/FormRadioGroup.vue";
 import FormCheckboxGroup from "@/components/FormCheckboxGroup.vue";
 
-import { ref } from "vue";
+import AddressForm from "@/components/AddressForm.vue";
+
+import { ref, reactive } from "vue";
 
 const formInputValue = ref("");
 const formSelectValue = ref("");
@@ -63,6 +66,13 @@ const formCheckboxValue = ref(false);
 const formRadioValue = ref("");
 const formRadioGroupValue = ref("");
 const formInputGroupValue = ref(new Set());
+
+const address = reactive({
+  street: "",
+  postcode: "",
+  state: "",
+  country: "",
+});
 </script>
 
 <style scoped>
