@@ -58,7 +58,7 @@ import FormCheckboxGroup from "@/components/FormCheckboxGroup.vue";
 
 import AddressForm from "@/components/AddressForm.vue";
 
-import { ref, reactive } from "vue";
+import { ref } from "vue";
 
 const formInputValue = ref("");
 const formSelectValue = ref("");
@@ -67,7 +67,7 @@ const formRadioValue = ref("");
 const formRadioGroupValue = ref("");
 const formInputGroupValue = ref(new Set());
 
-const address = reactive({
+const address = ref({
   street: "",
   postcode: "",
   state: "",
